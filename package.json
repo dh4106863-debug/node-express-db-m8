@@ -1,0 +1,24 @@
+{
+  "name": "express-db-m8",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Dayana Hernández",
+  "license": "ISC",
+  "description": "Proyecto Modulo 8",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^18.0.5",
+    "express": "^5.2.1",
+    "express-jsonwebtoken": "^0.1.2",
+    "express-jwt": "^8.5.1",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.4.0",
+    "nodemon": "^3.1.14",
+    "pg": "^8.23.1",
+    "sequelize": "^6.37.8"
+  }
+}

@@ -1,0 +1,6 @@
+.env
+node_modules/
+# Excluye los registros de errores de transacciones
+logs/  
+# Excluye los archivos del sistema operativo macOS
+.DS_Store 
