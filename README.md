@@ -14,47 +14,9 @@ Aplicación Backend RESTful segura desarrollada con **Node.js**, **Express**, **
 - **Cliente HTTP para Pruebas**: Postman / Thunder Client
 
 ## 📁 Arquitectura del Proyecto
-node_express_db/
-├── node_modules/              # Dependencias instaladas
-├── public/                    # Archivos estáticos servidos por Express
-│   ├── css/
-│   │   └── style.css          # Estilos CSS de la interfaz
-│   ├── js/
-│   │   └── main.js            # Lógica JavaScript del lado del cliente
-│   ├── uploads/               # Carpeta pública para almacenamiento de archivos
-│   └── index.html             # Vista HTML principal
-├── src/                       # Código fuente de la aplicación backend
-│   ├── config/
-│   │   └── db.js              # Configuración y conexión a PostgreSQL con Sequelize
-│   ├── controllers/
-│   │   ├── auth.controller.js # Controlador para Login y Autenticación
-│   │   ├── main.controller.js # Controlador de Usuarios y Lógica principal
-│   │   └── upload.controller.js# Controlador para Subida de Archivos
-│   ├── logs/
-│   │   └── log.txt            # Registro persistente de eventos y errores
-│   ├── middlewares/
-│   │   ├── auth.middleware.js # Middleware de validación y protección JWT
-│   │   ├── logger.middleware.js# Middleware para registro global de peticiones
-│   │   └── upload.middleware.js# Middleware de Multer (filtros y límites)
-│   ├── models/
-│   │   ├── index.js           # Inicialización y asociaciones entre modelos
-│   │   ├── pedido.js          # Modelo de la entidad Pedido
-│   │   └── usuario.js         # Modelo de la entidad Usuario
-│   ├── routes/
-│   │   ├── auth.routes.js     # Rutas de autenticación (/api/auth)
-│   │   ├── main.routes.js     # Rutas principales y CRUD (/api/usuarios)
-│   │   └── upload.routes.js   # Rutas de subida de archivos (/api/upload)
-│   ├── services/
-│   │   └── usuario.service.js # Lógica de negocio, consultas ORM y transacciones
-│   └── utils/
-│       └── response.util.js   # Helper estandarizado para respuestas JSON
-├── .env                       # Variables de entorno confidenciales
-├── .env.example               # Plantilla de ejemplo para variables de entorno
-├── .gitignore                 # Exclusiones de Git
-├── app.js                     # Punto de entrada del servidor Express
-├── package-lock.json          # Árbol exacto de dependencias
-├── package.json               # Configuración del proyecto y scripts
-└── README.md                  # Documentación principal del proyecto
+
+<img width="1598" height="3390" alt="carbon" src="https://github.com/user-attachments/assets/9950b455-755a-4a41-87a7-51df3f62ceed" />
+
 
 
 ## INTALACIONES PREVIAS
@@ -74,16 +36,10 @@ Envía una petición POST a /api/auth/login con tus credenciales. Si la autentic
 Consumir Rutas Protegidas:
 Para acceder a endpoints protegidos (ej. /api/upload/subir-foto o la creación/actualización de usuarios), debes adjuntar el token en el encabezado (Header) de la petición: Authorization: Bearer <TU_TOKEN_JWT_AQUI>
 
-Método,Endpoint,Descripción,Protección,Body / Param
-POST,/api/auth/login,Inicia sesión y genera Token JWT,🌐 Pública,"{""email"": ""..."", ""password"": ""...""}"
-GET,/status,Verifica el estado del servidor,🌐 Pública,N/A
-GET,/usuarios,Obtiene la lista de usuarios (Filtro ?nombre=),🌐 Pública,Query Param nombre (opcional)
-GET,/usuarios/:id,Obtiene un usuario con sus pedidos anidados,🌐 Pública,URL Param id
-POST,/usuarios,Crea un nuevo usuario,🔒 Privada (JWT),"{""nombre"": ""..."", ""email"": ""..."", ""saldo"": 500}"
-PUT,/usuarios/:id,Actualiza un usuario existente,🔒 Privada (JWT),"{""nombre"": ""..."", ""saldo"": 1500}"
-DELETE,/usuarios/:id,Elimina un usuario por ID,🔒 Privada (JWT),URL Param id
-POST,/usuarios/transferir,Ejecuta transferencia transaccional de saldo,🔒 Privada (JWT),"{""origenId"": 1, ""destinoId"": 2, ""monto"": 50}"
-POST,/api/upload/subir-foto,Sube una imagen de perfil al servidor,🔒 Privada (JWT),Form-Data: Key foto (Archivo Imagen)
+# Endpoints de la API RESTful
+
+<img width="893" height="226" alt="a99dfa42-1f31-496d-8faa-9856bb599637" src="https://github.com/user-attachments/assets/d32716ba-7e14-4382-86b0-9c470c890579" />
+
 
 # CAPTURAS ENDPOINT
 <img width="779" height="696" alt="3aa647da-2e6a-4e52-94ee-c077ec0a80ca" src="https://github.com/user-attachments/assets/b85199a9-8a05-44d3-9167-ba4a51cd045b" />
